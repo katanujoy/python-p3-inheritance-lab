@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+# test_teacher.py
 from teacher import Teacher
 from user import User
 
@@ -10,6 +9,7 @@ class TestTeacher:
 
     def test_is_subclass(self):
         '''is a subclass of "User".'''
+        # Ensure Teacher is a subclass of User
         assert(User in Teacher.__bases__)
 
     def test_initializes_with_names(self):
@@ -22,5 +22,4 @@ class TestTeacher:
 
     def test_can_teach(self):
         '''teaches from list of knowledge.'''
-        my_teacher = Teacher("My", "Teacher")
         assert(my_teacher.teach() in my_teacher.knowledge)
